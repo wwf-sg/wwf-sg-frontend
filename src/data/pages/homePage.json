@@ -1,0 +1,40 @@
+[
+  {
+    "type": "set-of-4",
+    "class": "",
+    "style": "background-color: #f4f2f2; color: #000;",
+    "formFields": {
+      "title": {
+        "content": "We address priority conservation and sustainability challenges in Singapore and Southeast Asia",
+        "class": "",
+        "style": ""
+      },
+      "images": [
+        {
+          "src": "./images/bring-wildlife-back.png",
+          "alt": "Bring Wildlife Back",
+          "class": "",
+          "style": ""
+        },
+        {
+          "src": "./images/protect-food-sources.png",
+          "alt": "Protect Food Sources",
+          "class": "",
+          "style": ""
+        },
+        {
+          "src": "./images/make-sg-haze-free.png",
+          "alt": "Make Singapore Haze-Free",
+          "class": "",
+          "style": ""
+        },
+        {
+          "src": "./images/keep-plastic-out-of-nature.png",
+          "alt": "Keep Plastic Out of Nature",
+          "class": "",
+          "style": ""
+        }
+      ]
+    }
+  }
+]
