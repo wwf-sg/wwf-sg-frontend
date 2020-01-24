@@ -87,6 +87,17 @@ h2 {
   .nav-link {
     padding: 0.2rem 0;
   }
+
+  .logo-footer {
+    max-width: 120px;
+  }
+  .wwf-tagline {
+    font-size: 16px;
+
+    @include media-breakpoint-up(md) {
+      font-size: 24px;
+    }
+  }
 }
 
 .wwf-sg-section {

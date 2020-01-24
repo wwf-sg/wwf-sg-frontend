@@ -4,7 +4,7 @@ const Footer = () => (
   <footer className="site-footer pb-4">
     <div className="container">
       <div className="row pt-5 mb-5">
-        <div className="col-8 offset-2">
+        <div className="col-8 offset-2 col-md-4 offset-md-8 col-lg-3 offset-lg-9">
           <p className="font-weight-bold" style={{ fontSize: "16px" }}>
             We are on...
           </p>
@@ -57,15 +57,15 @@ const Footer = () => (
       </div>
 
       <div className="row align-items-center mb-5">
-        <div className="col-3">
+        <div className="col-3 col-md-2">
           <img
             className="logo-footer w-100"
             src="//d1diae5goewto1.cloudfront.net/_skins/yangon/img/logo.png"
             alt="WWF"
           />
         </div>
-        <div className="col-9">
-          <p className="font-weight-bold mb-0" style={{ fontSize: "16px" }}>
+        <div className="col-9 col-md-8 pl-0">
+          <p className="font-weight-bold mb-0 wwf-tagline">
             Building a future in which people live in harmony with nature
           </p>
         </div>
@@ -185,7 +185,7 @@ const Footer = () => (
             </ul>
           </nav>
         </div>
-        <div className="col-12 mt-4">
+        <div className="col-12 mt-3">
           <hr />
         </div>
       </div>
