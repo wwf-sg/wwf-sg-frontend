@@ -24,16 +24,15 @@ const Layout = ({ children }) => {
     }
   `)
 
+  // console.log(NODE_ENV)
+
   return (
     <div>
       <Helmet>
-        <base href="https://wwf-sg.github.io/wwf-sg-frontend/" />
-        123
+        {/* <base href="https://wwf-sg.github.io/wwf-sg-frontend/" /> */}
       </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
-
       <main>{children}</main>
-
       <Footer />
     </div>
   )

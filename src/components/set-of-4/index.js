@@ -3,8 +3,6 @@ import React from "react"
 import SetOf4Styles from "./style.module.scss"
 
 const SetOf4 = props => {
-  console.log(props.config.formFields.images)
-
   return (
     <section className={`wwf-sg-section ${SetOf4Styles.section}`}>
       <div className="wwf-sg-container container">
