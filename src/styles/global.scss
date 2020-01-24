@@ -15,24 +15,25 @@
 @import "./node_modules/bootstrap/scss/dropdown";
 @import "./node_modules/bootstrap/scss/transitions";
 
-$fa-font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts";
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: normal;
-  //   font-display: $fa-font-display;
-  src: url("#{$fa-font-path}/fa-brands-400.eot");
-  src: url("#{$fa-font-path}/fa-brands-400.eot?#iefix")
-      format("embedded-opentype"),
-    url("#{$fa-font-path}/fa-brands-400.woff2") format("woff2"),
-    url("#{$fa-font-path}/fa-brands-400.woff") format("woff"),
-    url("#{$fa-font-path}/fa-brands-400.ttf") format("truetype"),
-    url("#{$fa-font-path}/fa-brands-400.svg#fontawesome") format("svg");
-}
-.fab {
-  font-family: "Font Awesome 5 Brands";
-}
+$fa-font-path: "/webfonts/fa";
+// @font-face {
+//   font-family: "Font Awesome 5 Brands";
+//   font-style: normal;
+//   font-weight: normal;
+//   //   font-display: $fa-font-display;
+//   src: url("#{$fa-font-path}/fa-brands-400.eot");
+//   src: url("#{$fa-font-path}/fa-brands-400.eot?#iefix")
+//       format("embedded-opentype"),
+//     url("#{$fa-font-path}/fa-brands-400.woff2") format("woff2"),
+//     url("#{$fa-font-path}/fa-brands-400.woff") format("woff"),
+//     url("#{$fa-font-path}/fa-brands-400.ttf") format("truetype"),
+//     url("#{$fa-font-path}/fa-brands-400.svg#fontawesome") format("svg");
+// }
+// .fab {
+//   font-family: "Font Awesome 5 Brands";
+// }
 @import "./node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "./node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
 
 @import "./button";
 

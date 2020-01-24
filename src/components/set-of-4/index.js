@@ -21,7 +21,7 @@ const SetOf4 = props => {
             <div className="row no-gutters">
               {props.config.formFields.images.map(image => {
                 return (
-                  <div className="col-6 col-md-3">
+                  <div key={image.alt} className="col-6 col-md-3">
                     <img
                       className={`w-100 ${SetOf4Styles.img} ${image.class}`}
                       src={image.src}
