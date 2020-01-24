@@ -6,6 +6,7 @@
  */
 
 import React from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -25,6 +26,10 @@ const Layout = ({ children }) => {
 
   return (
     <div>
+      <Helmet>
+        <base href="https://wwf-sg.github.io/wwf-sg-frontend/" />
+        123
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <main>{children}</main>
