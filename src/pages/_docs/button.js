@@ -1,13 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import Layout from "../../components/layout"
-import SEO from "../../components/seo"
+import Layout from "./layout"
 import Button from "../../components/ui/Button"
 
 const DocButton = () => (
   <Layout>
-    <SEO title="Buttons | Documentation" />
     <Link style={{ textDecoration: "underline" }} to="/_docs/">
       Back to index
     </Link>

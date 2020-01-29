@@ -1,12 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SiteLayout from "../components/SiteLayout"
+import Seo from "../components/Seo"
 // import Button from "../components/ui/Button"
 import SetOf4 from "../components/set-of-4"
+import RecentPostsWidget from "../components/RecentPostsWidget"
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   const data = useStaticQuery(graphql`
     query HomePageQuery {
       allHomePageJson {
@@ -36,11 +37,9 @@ const IndexPage = () => {
   `)
 
   return (
-    <Layout>
-      <SEO title="Home" />
-
+    <SiteLayout location={location}>
+      <Seo title="Home" />
       <SetOf4 config={data.allHomePageJson.edges[0].node}></SetOf4>
-
       {/* <section className="my-5">
         <div className="container">
           <div className="col">
@@ -48,7 +47,12 @@ const IndexPage = () => {
           </div>
         </div>
       </section> */}
-    </Layout>
+
+      <RecentPostsWidget
+        style={{ backgroundColor: "#f4f2f2" }}
+        title="What's Hapenning"
+      />
+    </SiteLayout>
   )
 }
 

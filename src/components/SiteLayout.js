@@ -1,19 +1,19 @@
 /**
- * Layout component that queries for data
+ * SiteLayout component that queries for data
  * with Gatsby's useStaticQuery component
  *
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
 import React from "react"
-import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
+import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import Footer from "./footer"
+import SiteHeader from "./SiteHeader"
+import SiteFooter from "./SiteFooter"
 
-const Layout = ({ children }) => {
+const SiteLayout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,22 +24,26 @@ const Layout = ({ children }) => {
     }
   `)
 
-  // console.log(NODE_ENV)
-
   return (
     <div>
       <Helmet>
         {/* <base href="https://wwf-sg.github.io/wwf-sg-frontend/" /> */}
       </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
+
+      <SiteHeader
+        location={location}
+        siteTitle={data.site.siteMetadata.title}
+      />
+
       <main>{children}</main>
-      <Footer />
+
+      <SiteFooter location={location} />
     </div>
   )
 }
 
-Layout.propTypes = {
+SiteLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default SiteLayout
