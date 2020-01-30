@@ -1,7 +1,7 @@
 import React from "react"
 import moment from "moment/moment"
 import { Link } from "gatsby"
-import AvatarImg from "../../images/gatsby-icon.png"
+import AvatarImg from "../../images/wwf-icon-32x32.png"
 
 const PostEntryMeta = ({ post }) => (
   <div

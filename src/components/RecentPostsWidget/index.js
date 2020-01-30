@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import PropTypes from "prop-types"
 import moment from "moment/moment"
@@ -25,13 +25,37 @@ const RecentPostsWidget = props => {
             date
             tags {
               nodes {
-                slug
                 name
+                link
+                slug
+              }
+            }
+            categories {
+              nodes {
+                name
+                link
+                slug
+              }
+            }
+            campaigns {
+              nodes {
+                name
+                link
+                slug
+                campaignsTaxonomyFields {
+                  featureColor
+                  featureIcon {
+                    sourceUrl
+                    srcSet(size: THUMBNAIL)
+                    altText
+                  }
+                }
               }
             }
             featuredImage {
+              sourceUrl
               altText
-              srcSet(size: POST_THUMBNAIL)
+              srcSet
             }
           }
         }
@@ -62,6 +86,48 @@ const RecentPostsWidget = props => {
                 </Link>
 
                 <header className={`p-3 entry-header ${RPWstyle.entryHeader}`}>
+                  <div className="campaigns-link mb-3">
+                    {post.campaigns.nodes.map((campaign, i) => {
+                      if (i > 1) return null
+                      return (
+                        <Fragment key={campaign.slug}>
+                          <Link
+                            className={`entry-campaign ${RPWstyle.entryCampaign}`}
+                            style={{
+                              color:
+                                campaign.campaignsTaxonomyFields.featureColor,
+                              fontSize: "16px",
+                              fontWeight: 600,
+                              lineHeight: 1,
+                              letterSpacing: "-0.7px",
+                            }}
+                            to={"/campaigns/" + campaign.slug}
+                            key={campaign.slug}
+                            rel="category"
+                          >
+                            <img
+                              className="mr-2"
+                              style={{ maxWidth: "40px" }}
+                              src={
+                                campaign.campaignsTaxonomyFields.featureIcon
+                                  .sourceUrl
+                              }
+                              srcSet={
+                                campaign.campaignsTaxonomyFields.featureIcon
+                                  .srcSet
+                              }
+                              alt={
+                                campaign.campaignsTaxonomyFields.featureIcon
+                                  .altText
+                              }
+                            />
+                            {campaign.name}
+                          </Link>
+                        </Fragment>
+                      )
+                    })}
+                  </div>
+
                   <Link to={"/blog/" + createLocalLink(post.link)}>
                     <h3
                       className={`entry-title ${RPWstyle.entryTitle}`}
@@ -115,7 +181,7 @@ const RecentPostsWidget = props => {
           })}
         </div>
         <div className="mb-4 text-center">
-          <Link className="btn btn-outline-primary" to={"/blog/page/1"}>
+          <Link className="btn btn-outline-primary" to={"/blog"}>
             Read More
           </Link>
         </div>

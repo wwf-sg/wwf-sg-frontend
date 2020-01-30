@@ -15,8 +15,8 @@
 @import "./node_modules/bootstrap/scss/dropdown";
 @import "./node_modules/bootstrap/scss/transitions";
 
-$fa-font-path: "/webfonts/fa"; // dev
-// $fa-font-path: "/wwf-sg-frontend/webfonts/fa"; // build
+// $fa-font-path: "/webfonts/fa"; // dev
+$fa-font-path: "/wwf-sg-frontend/webfonts/fa"; // build
 // @font-face {
 //   font-family: "Font Awesome 5 Brands";
 //   font-style: normal;
@@ -134,6 +134,9 @@ h2 {
     margin-right: 15px;
     margin-left: 0;
     vertical-align: super;
+  }
+  .dropdown-menu {
+    margin-top: 0;
   }
 }
 .dropdown {

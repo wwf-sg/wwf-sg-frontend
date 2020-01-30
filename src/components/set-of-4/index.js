@@ -1,4 +1,7 @@
 import React from "react"
+import { Link } from "gatsby"
+
+import { createLocalLink } from "../../utils"
 
 import SetOf4Styles from "./style.module.scss"
 
@@ -18,13 +21,16 @@ const SetOf4 = props => {
           <div className="wwf-sg-column col">
             <div className="row no-gutters">
               {props.config.formFields.images.map(image => {
+                console.log(image)
                 return (
                   <div key={image.alt} className="col-6 col-md-3">
-                    <img
-                      className={`w-100 ${SetOf4Styles.img} ${image.class}`}
-                      src={image.src}
-                      alt={image.alt}
-                    />
+                    <Link to={createLocalLink(image.link)}>
+                      <img
+                        className={`w-100 ${SetOf4Styles.img} ${image.class}`}
+                        src={image.src}
+                        alt={image.alt}
+                      />
+                    </Link>
                   </div>
                 )
               })}

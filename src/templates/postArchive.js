@@ -15,9 +15,9 @@ class IndexPage extends Component {
 
       if (!pageNumber) {
         return null
-      } else if (1 === pageNumber) {
+      } else if (2 === pageNumber) {
         previousLink = `/blog`
-      } else if (1 < pageNumber) {
+      } else if (2 < pageNumber) {
         previousLink = `/blog/page/${pageNumber - 1}`
       }
 

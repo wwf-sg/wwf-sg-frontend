@@ -23,6 +23,7 @@ const IndexPage = ({ location }) => {
                 class
                 src
                 style
+                link
               }
               title {
                 class

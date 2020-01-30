@@ -41,7 +41,7 @@ module.exports = async ({ actions, graphql }) => {
       const nodeIds = nodes.map(node => node.databaseId)
       const blogTemplate = path.resolve(`./src/templates/postArchive.js`)
       const blogPagePath = !variables.after
-        ? `/blog/page/1`
+        ? `/blog`
         : `/blog/page/${pageNumber}`
 
       blogPages[pageNumber] = {
@@ -74,8 +74,6 @@ module.exports = async ({ actions, graphql }) => {
       console.log(`createBlogPage ${blogPage.context.pageNumber}`)
       createPage(blogPage)
     })
-
-    console.log(postTemplate)
 
     allPosts.map(post => {
       console.log(`create post: ${post.uri}`)

@@ -6,7 +6,7 @@ import config from "../../../config"
 const PostEntry = ({ post }) => {
   return (
     <Fragment>
-      <div type="flex" justify="space-around" gutter={16}>
+      <div>
         <div>
           <PostEntryMeta post={post} />
         </div>

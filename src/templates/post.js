@@ -68,16 +68,36 @@ export const pageQuery = graphql`
             url
           }
         }
+        featuredImage {
+          altText
+          srcSet(size: POST_THUMBNAIL)
+        }
         tags {
           nodes {
             name
             link
+            slug
           }
         }
         categories {
           nodes {
             name
             link
+            slug
+          }
+        }
+        campaigns {
+          nodes {
+            name
+            link
+            slug
+            campaignsTaxonomyFields {
+              featureColor
+              featureIcon {
+                srcSet(size: THUMBNAIL)
+                altText
+              }
+            }
           }
         }
       }

@@ -11,24 +11,32 @@
       },
       "images": [
         {
+          "title": "Bring Wildlife Back",
+          "link": "campaign/bring-wildlife-back",
           "src": "./images/bring-wildlife-back.png",
           "alt": "Bring Wildlife Back",
           "class": "",
           "style": ""
         },
         {
+          "title": "Protect Food Sources",
+          "link": "campaign/protect-food-sources",
           "src": "./images/protect-food-sources.png",
           "alt": "Protect Food Sources",
           "class": "",
           "style": ""
         },
         {
+          "title": "Make Singapore Haze-Free",
+          "link": "campaign/make-sg-haze-free",
           "src": "./images/make-sg-haze-free.png",
           "alt": "Make Singapore Haze-Free",
           "class": "",
           "style": ""
         },
         {
+          "title": "Keep Plastic Out of Nature",
+          "link": "campaign/keep-plastic-out-of-nature",
           "src": "./images/keep-plastic-out-of-nature.png",
           "alt": "Keep Plastic Out of Nature",
           "class": "",
