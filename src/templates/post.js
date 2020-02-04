@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import SiteLayout from "../components/SiteLayout"
 import PostEntryMeta from "../components/PostEntryMeta"
 import Seo from "../components/Seo"
@@ -28,26 +28,69 @@ const Post = props => {
       wpgraphql: { post },
     },
   } = props
-  const { title, content } = post
+  const { content } = post
   return (
     <SiteLayout location={location}>
       <Seo title={`${post.title}`} />
-      <div type="flex">
-        <div>
-          <h1>{title}</h1>
-          <div type="flex" justify="space-around">
-            <div>
-              <PostEntryMeta post={post} />
-            </div>
-            <div>
-              <div dangerouslySetInnerHTML={{ __html: content }} />
-              {post.categories.nodes.length || post.tags.nodes.length
-                ? renderTerms(post.categories.nodes, post.tags.nodes)
-                : null}
-            </div>
-          </div>
-        </div>
-      </div>
+      <section className="container">
+        <article className={`entry pt-5`}>
+          <header>
+            <h1
+              className={`entry-title`}
+              dangerouslySetInnerHTML={{
+                __html: post.title,
+              }}
+            ></h1>
+            <PostEntryMeta post={post} />
+            {post.campaigns.nodes.map((campaign, i) => {
+              if (i > 1) return null
+              return (
+                <Fragment key={campaign.slug}>
+                  <Link
+                    className={`entry-campaign`}
+                    style={{
+                      color: campaign.campaignsTaxonomyFields.featureColor,
+                      fontSize: "16px",
+                      fontWeight: 600,
+                      lineHeight: 1,
+                      letterSpacing: "-0.7px",
+                    }}
+                    to={"/campaigns/" + campaign.slug}
+                    rel="category"
+                  >
+                    <img
+                      className="mr-2"
+                      style={{ maxWidth: "40px" }}
+                      srcSet={
+                        campaign.campaignsTaxonomyFields.featureIcon.srcSet
+                      }
+                      src={
+                        campaign.campaignsTaxonomyFields.featureIcon.sourceUrl
+                      }
+                      alt={campaign.campaignsTaxonomyFields.featureIcon.altText}
+                    />
+                    {campaign.name}
+                  </Link>
+                </Fragment>
+              )
+            })}
+            <img
+              className={`w-100 mb-3 entry-featured-image`}
+              srcSet={post.featuredImage.srcSet}
+              alt={post.featuredImage.altText}
+            />
+          </header>
+          <div
+            className="entry-content"
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
+          <footer>
+            {post.categories.nodes.length || post.tags.nodes.length
+              ? renderTerms(post.categories.nodes, post.tags.nodes)
+              : null}
+          </footer>
+        </article>
+      </section>
     </SiteLayout>
   )
 }

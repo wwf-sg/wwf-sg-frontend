@@ -63,40 +63,36 @@ class IndexPage extends Component {
 
     return (
       <SiteLayout pageNumber={pageNumber} location={{ location }}>
-        <div className="container">
-          {!pageNumber ? (
-            <div className="py-5 text-center">
-              <p>No posts found</p>
-            </div>
-          ) : (
-            <div>
-              <Seo title={`Blog${blogPageNumber}`} />
-              <div type="flex" gutter={24}>
-                <div className="col">
+        <section className="wwf-sg-section py-4" style={this.props.style}>
+          <div className="container">
+            {!pageNumber ? (
+              <div className="py-5 text-center">
+                <p>No posts found</p>
+              </div>
+            ) : (
+              <>
+                <Seo title={`Blog${blogPageNumber}`} />
+                <div className={`entry-grid mb-4 row`}>
                   {data &&
                     data.wpgraphql &&
                     data.wpgraphql.posts.nodes.map(post => (
-                      <div key={post.id}>
-                        <PostEntry post={post} />
-                      </div>
+                      <PostEntry key={post.id} post={post} />
                     ))}
                 </div>
-              </div>
-              <div>
-                <div className="col">
-                  <div type="flex" justify="start">
-                    {this.renderPreviousLink()}
+                <div className="container-fluid">
+                  <div className="row">
+                    <div className="col">
+                      <div>{this.renderPreviousLink()}</div>
+                    </div>
+                    <div className="col text-right">
+                      <div>{this.renderNextLink()}</div>
+                    </div>
                   </div>
                 </div>
-                <div className="col">
-                  <div type="flex" justify="end">
-                    {this.renderNextLink()}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
+              </>
+            )}
+          </div>
+        </section>
       </SiteLayout>
     )
   }

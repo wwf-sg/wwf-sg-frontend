@@ -9,7 +9,7 @@ const SiteHeader = ({ location }) => {
           <a className="navbar-brand p-0" href="/">
             <img
               className="site-logo"
-              src="images/wwf-sg-logo.png"
+              src="/images/wwf-sg-logo.png"
               alt=""
               style={{ maxWidth: "80px" }}
             />
@@ -66,7 +66,7 @@ const SiteHeader = ({ location }) => {
                   {/* <i className="fas fa-search fa-fw"></i> */}
                   <img
                     style={{ maxWidth: "28px" }}
-                    src="images/navigation-search.png"
+                    src="/images/navigation-search.png"
                     alt="Search"
                   />
                   <span className="d-md-none">Search</span>

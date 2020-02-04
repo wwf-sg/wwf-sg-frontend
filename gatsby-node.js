@@ -5,10 +5,10 @@
  */
 
 const createPosts = require(`./gatsby/createPosts`)
-// const createUsers = require(`./gatsby/createUsers`)
-// const createCampaigns = require(`./gatsby/createCategories`)
+const createCampaigns = require(`./gatsby/createCampaigns`)
 const createCategories = require(`./gatsby/createCategories`)
-// const createTags = require(`./gatsby/createTags`)
+const createTags = require(`./gatsby/createTags`)
+// const createUsers = require(`./gatsby/createUsers`)
 
 exports.createPages = async ({ actions, graphql }) => {
   // Redirections
@@ -21,8 +21,8 @@ exports.createPages = async ({ actions, graphql }) => {
   })
 
   await createPosts({ actions, graphql })
-  //   await createUsers({ actions, graphql })
-  //   await createCampaigns({ actions, graphql })
+  await createCampaigns({ actions, graphql })
   await createCategories({ actions, graphql })
-  //   await createTags({ actions, graphql })
+  await createTags({ actions, graphql })
+  //   await createUsers({ actions, graphql })
 }

@@ -21,6 +21,7 @@ const RecentPostsWidget = props => {
             id
             title
             link
+            slug
             excerpt
             date
             tags {
@@ -40,7 +41,6 @@ const RecentPostsWidget = props => {
             campaigns {
               nodes {
                 name
-                link
                 slug
                 campaignsTaxonomyFields {
                   featureColor
@@ -66,12 +66,10 @@ const RecentPostsWidget = props => {
   const { title = "Recent Posts" } = props
 
   return (
-    <section className="py-4" style={props.style}>
+    <section className="wwf-sg-section py-4" style={props.style}>
       <div className="container">
         <div className="mb-5">
-          <h2 className={`text-center text-md-right ${RPWstyle.widgetTitle}`}>
-            {title}
-          </h2>
+          <h2 className={`text-center ${RPWstyle.widgetTitle}`}>{title}</h2>
         </div>
         <div className={`entry-grid mb-4 ${RPWstyle.entryGrid}`}>
           {data.wpgraphql.posts.nodes.map(post => {
@@ -81,6 +79,7 @@ const RecentPostsWidget = props => {
                   <img
                     className={`w-100 ${RPWstyle.entryImage}`}
                     srcSet={post.featuredImage.srcSet}
+                    src={post.featuredImage.sourceUrl}
                     alt={post.featuredImage.altText}
                   />
                 </Link>
@@ -108,13 +107,13 @@ const RecentPostsWidget = props => {
                             <img
                               className="mr-2"
                               style={{ maxWidth: "40px" }}
-                              src={
-                                campaign.campaignsTaxonomyFields.featureIcon
-                                  .sourceUrl
-                              }
                               srcSet={
                                 campaign.campaignsTaxonomyFields.featureIcon
                                   .srcSet
+                              }
+                              src={
+                                campaign.campaignsTaxonomyFields.featureIcon
+                                  .sourceUrl
                               }
                               alt={
                                 campaign.campaignsTaxonomyFields.featureIcon

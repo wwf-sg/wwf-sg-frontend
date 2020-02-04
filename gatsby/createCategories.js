@@ -11,7 +11,7 @@ module.exports = async ({ actions, graphql }) => {
         }
         nodes {
           id
-          categoryId
+          databaseId
           slug
         }
       }
