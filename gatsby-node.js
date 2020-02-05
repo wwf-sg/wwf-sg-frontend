@@ -5,7 +5,7 @@
  */
 
 // const createPages = require(`./gatsby/createPages`)
-const createHomePage = require(`./gatsby/createHomePage`)
+// const createHomePage = require(`./gatsby/createHomePage`)
 const createPosts = require(`./gatsby/createPosts`)
 const createCampaigns = require(`./gatsby/createCampaigns`)
 const createCategories = require(`./gatsby/createCategories`)
@@ -23,7 +23,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // Create pages here
   // await createPages({ actions, graphql })
-  await createHomePage({ actions, graphql })
+  // await createHomePage({ actions, graphql })
   await createPosts({ actions, graphql })
   await createCampaigns({ actions, graphql })
   await createCategories({ actions, graphql })
