@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
 import { createLocalLink } from "../../../utils"
 
@@ -12,7 +12,7 @@ const SetOfFourSection = props => {
         <div className="wwf-sg-row row">
           <div className="wwf-sg-column col">
             <h2 className={`text-md-center ${SetOfFourSectionStyles.title}`}>
-              {data.homePageJson.formFields.title.text}
+              {props.formFields.title.text}
             </h2>
           </div>
         </div>
@@ -20,7 +20,7 @@ const SetOfFourSection = props => {
         <div className="wwf-sg-row row">
           <div className="wwf-sg-column col">
             <div className="row no-gutters">
-              {data.homePageJson.formFields.images.map(image => {
+              {props.formFields.images.map(image => {
                 return (
                   <div key={image.alt} className="col-6 col-md-3">
                     <Link to={createLocalLink(image.link)}>

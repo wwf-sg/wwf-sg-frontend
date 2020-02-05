@@ -5,8 +5,8 @@ import Seo from "../components/Seo"
 
 import HeroSection from "../components/Sections/HeroSection"
 import ScrollSection from "../components/Sections/ScrollSection"
-// import SetOfFourSection from "../components/Sections/SetOfFourSection"
-// import RecentPostsWidget from "../components/Widgets/RecentPostsWidget"
+import SetOfFourSection from "../components/Sections/SetOfFourSection"
+import RecentPostsWidget from "../components/Widgets/RecentPostsWidget"
 
 const Page = props => {
   const {
@@ -19,16 +19,14 @@ const Page = props => {
   const components = {
     HeroSection: HeroSection,
     ScrollSection: ScrollSection,
-    // SetOfFourSection: SetOfFourSection,
-    // RecentPostsWidget: RecentPostsWidget,
+    SetOfFourSection: SetOfFourSection,
+    RecentPostsWidget: RecentPostsWidget,
   }
 
   return (
     <SiteLayout location={location}>
       <Seo title={`${title}`} />
       {content.map(component => {
-        console.log(component)
-
         return React.createElement(components[component.type], {
           ...component,
           key: component.type,

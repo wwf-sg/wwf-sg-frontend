@@ -3,10 +3,6 @@ import React from "react"
 
 import SiteLayout from "../components/SiteLayout"
 import Seo from "../components/Seo"
-// import HeroSection from "../components/Sections/HeroSection"
-// import ScrollSection from "../components/Sections/ScrollSection"
-// import SetOfFourSection from "../components/Sections/SetOfFourSection"
-// import RecentPostsWidget from "../components/Widgets/RecentPostsWidget"
 
 const IndexPage = ({ location }) => {
   // const data = useStaticQuery(graphql`

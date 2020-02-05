@@ -5,8 +5,6 @@ import Button from "../../Ui/Button"
 import HeroSectionStyles from "./style.module.scss"
 
 const HeroSection = props => {
-  console.log(props)
-
   return (
     <section
       className={`wwf-sg-section d-flex align-items-center ${HeroSectionStyles.section}`}
