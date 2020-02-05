@@ -1,6 +1,6 @@
 ## 🧐 Preview
 
-You can preview the website under development here - [https://wwf-sg.github.io/wwf-sg-frontend/](https://wwf-sg.github.io/wwf-sg-frontend/)
+You can preview the website under development here - [https://wwf-sg-git-build.netlify.com/](https://wwf-sg-git-build.netlify.com/)
 
 ## 🚀 Development
 
@@ -33,6 +33,10 @@ _API documentation is still work in progress_
 You can find component documentation here [https://wwf-sg.github.io/wwf-sg-frontend/_docs](https://wwf-sg.github.io/wwf-sg-frontend/_docs)
 
 ## 💫 Deploy
+
+Any commits to master directory triggers build and deploy in netlify by default.
+
+**Legacy**
 
 Deploy the build to [https://wwf-sg.github.io/wwf-sg-frontend/](https://wwf-sg.github.io/wwf-sg-frontend/) by running just one command
 
