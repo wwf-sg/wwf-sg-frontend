@@ -13,38 +13,44 @@ const IndexPage = ({ location }) => {
   const data = useStaticQuery(graphql`
     query HomePageQuery {
       allHomePageJson {
-        edges {
-          node {
-            styles
-            type
-            id
-            class
-          }
+        nodes {
+          styles
+          type
+          id
+          class
         }
       }
     }
   `)
 
-  console.log(data)
+  console.log(data.allHomePageJson.nodes)
 
   return (
     <SiteLayout location={location}>
       <Seo title="Home" />
 
-      <HeroSection config={data.allHomePageJson.edges[0].node}></HeroSection>
-
-      <ScrollSection
-        config={data.allHomePageJson.edges[1].node}
-      ></ScrollSection>
-
-      <SetOfFourSection
-        config={data.allHomePageJson.edges[2].node}
-      ></SetOfFourSection>
-
-      <RecentPostsWidget
-        style={{ backgroundColor: "#f4f2f2" }}
-        title="What's Hapenning"
-      />
+      {data.allHomePageJson.nodes.map(node => {
+        console.log()
+        switch (node.type) {
+          case "hero-section":
+            return <HeroSection config={node}></HeroSection>
+            break
+          case "scroll-section":
+            return <ScrollSection config={node}></ScrollSection>
+            break
+          case "set-of-four-section":
+            return <SetOfFourSection config={node}></SetOfFourSection>
+            break
+          case "recent-posts-widget":
+            return (
+              <RecentPostsWidget
+                style={{ backgroundColor: "#f4f2f2" }}
+                config={node}
+              ></RecentPostsWidget>
+            )
+            break
+        }
+      })}
     </SiteLayout>
   )
 }

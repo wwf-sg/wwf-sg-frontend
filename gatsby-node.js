@@ -4,6 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
+// const createPages = require(`./gatsby/createPages`)
+const createHomePage = require(`./gatsby/createHomePage`)
 const createPosts = require(`./gatsby/createPosts`)
 const createCampaigns = require(`./gatsby/createCampaigns`)
 const createCategories = require(`./gatsby/createCategories`)
@@ -17,12 +19,14 @@ exports.createPages = async ({ actions, graphql }) => {
   createRedirect({
     fromPath: "/blog/page/1",
     toPath: "/blog",
-    isPermanent: true,
   })
 
+  // Create pages here
+  // await createPages({ actions, graphql })
+  await createHomePage({ actions, graphql })
   await createPosts({ actions, graphql })
   await createCampaigns({ actions, graphql })
   await createCategories({ actions, graphql })
   // await createTags({ actions, graphql })
-  //   await createUsers({ actions, graphql })
+  // await createUsers({ actions, graphql })
 }

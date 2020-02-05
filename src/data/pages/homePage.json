@@ -96,5 +96,23 @@
         }
       ]
     }
+  },
+  {
+    "type": "recent-posts-widget",
+    "class": "",
+    "styles": "",
+    "formFields": {
+      "title": {
+        "text": "What's Hapenning",
+        "class": "",
+        "styles": ""
+      },
+      "button": {
+        "href": "/blog",
+        "icon": "READ MORE",
+        "class": "",
+        "styles": ""
+      }
+    }
   }
 ]

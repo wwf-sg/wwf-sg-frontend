@@ -7,6 +7,7 @@ module.exports = {
   },
   plugins: [
     // Setup WPGraphQL.com to be the source
+    [`gatsby-plugin-netlify`],
     {
       resolve: `gatsby-source-graphql`,
       options: {
