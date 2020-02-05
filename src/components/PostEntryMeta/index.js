@@ -4,11 +4,7 @@ import { Link } from "gatsby"
 import AvatarImg from "../../images/wwf-icon-32x32.png"
 
 const PostEntryMeta = ({ post }) => (
-  <div
-    justify="middle"
-    style={{ textAlign: `center`, marginBottom: `15px` }}
-    gutter={16}
-  >
+  <div style={{ textAlign: `center`, marginBottom: `15px` }}>
     <div style={{ textAlign: `center` }}>
       <Link to={`/author/${post.author.slug}`}>
         <img

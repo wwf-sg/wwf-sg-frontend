@@ -55,7 +55,7 @@ const Post = props => {
                       lineHeight: 1,
                       letterSpacing: "-0.7px",
                     }}
-                    to={"/campaigns/" + campaign.slug}
+                    to={"/campaign/" + campaign.slug}
                     rel="category"
                   >
                     <img

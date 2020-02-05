@@ -63,7 +63,10 @@ class IndexPage extends Component {
 
     return (
       <SiteLayout pageNumber={pageNumber} location={{ location }}>
-        <section className="wwf-sg-section py-4" style={this.props.style}>
+        <section
+          className="wwf-sg-section py-3 py-md-5"
+          style={this.props.style}
+        >
           <div className="container">
             {!pageNumber ? (
               <div className="py-5 text-center">

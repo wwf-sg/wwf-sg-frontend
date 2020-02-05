@@ -14,13 +14,15 @@ const CategoryTemplate = props => {
   return (
     <SiteLayout location={location}>
       <Seo title={`${category.name}`} />
-      <div type="flex" gutter={24}>
-        <div xs={24} md={16}>
-          <h1>Category: {category.name}</h1>
-          {category.posts.nodes &&
-            category.posts.nodes.map(post => <PostEntry post={post} />)}
+      <section className="wwf-sg-section py-3 py-md-5">
+        <div className="container">
+          <div className={`entry-grid mb-4 row`}>
+            <h1>Category: {category.name}</h1>
+            {category.posts.nodes &&
+              category.posts.nodes.map(post => <PostEntry post={post} />)}
+          </div>
         </div>
-      </div>
+      </section>
     </SiteLayout>
   )
 }

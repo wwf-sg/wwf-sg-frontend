@@ -14,15 +14,17 @@ const User = props => {
   return (
     <SiteLayout location={location}>
       <Seo title={`${user.name}`} />
-      <div>
-        <div>
-          <h1>{user.name}</h1>
-          <h2>Latest Posts</h2>
-          {user.posts.nodes.map(post => (
-            <PostEntry post={post} />
-          ))}
+      <section className="wwf-sg-section py-3 py-md-5">
+        <div className="container">
+          <div className="row my-3">
+            <h1>{user.name}</h1>
+          </div>
+          <div className={`entry-grid mb-4 row`}>
+            {user.posts.nodes &&
+              user.posts.nodes.map(post => <PostEntry post={post} />)}
+          </div>
         </div>
-      </div>
+      </section>
     </SiteLayout>
   )
 }

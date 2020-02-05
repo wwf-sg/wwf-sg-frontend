@@ -14,13 +14,17 @@ const TagTemplate = props => {
   return (
     <SiteLayout location={location}>
       <Seo title={`${tag.title}`} />
-      <h2>{tag.name}</h2>
-      <div>
-        <div>
-          {tag.posts.nodes &&
-            tag.posts.nodes.map(post => <PostEntry post={post} />)}
+      <section className="wwf-sg-section py-3 py-md-5">
+        <div className="container">
+          <div className="row my-3">
+            <h1>#{tag.name}</h1>
+          </div>
+          <div className={`entry-grid mb-4 row`}>
+            {tag.posts.nodes &&
+              tag.posts.nodes.map(post => <PostEntry post={post} />)}
+          </div>
         </div>
-      </div>
+      </section>
     </SiteLayout>
   )
 }
