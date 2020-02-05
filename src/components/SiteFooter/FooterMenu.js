@@ -37,10 +37,18 @@ const renderMenuItem = menuItem => {
       <li className="nav-item" key={menuItem.id}>
         {link ? (
           <Link className="nav-link" to={createLocalLink(menuItem.url)}>
-            {menuItem.label}
+            <span
+              dangerouslySetInnerHTML={{
+                __html: menuItem.label,
+              }}
+            ></span>
           </Link>
         ) : (
-          menuItem.label
+          <span
+            dangerouslySetInnerHTML={{
+              __html: menuItem.label,
+            }}
+          ></span>
         )}
       </li>
     )

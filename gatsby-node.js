@@ -7,7 +7,7 @@
 const createPosts = require(`./gatsby/createPosts`)
 const createCampaigns = require(`./gatsby/createCampaigns`)
 const createCategories = require(`./gatsby/createCategories`)
-const createTags = require(`./gatsby/createTags`)
+// const createTags = require(`./gatsby/createTags`)
 // const createUsers = require(`./gatsby/createUsers`)
 
 exports.createPages = async ({ actions, graphql }) => {
@@ -23,6 +23,6 @@ exports.createPages = async ({ actions, graphql }) => {
   await createPosts({ actions, graphql })
   await createCampaigns({ actions, graphql })
   await createCategories({ actions, graphql })
-  await createTags({ actions, graphql })
+  // await createTags({ actions, graphql })
   //   await createUsers({ actions, graphql })
 }

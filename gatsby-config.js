@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: `/wwf-sg-frontend/`,
   siteMetadata: {
     title: `WWF Singapore`,
     description: `description`,
