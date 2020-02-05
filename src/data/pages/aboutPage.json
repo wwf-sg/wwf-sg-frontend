@@ -1,0 +1,58 @@
+{
+  "title": "About",
+  "slug": "about",
+  "content": [
+    {
+      "type": "HeroSection",
+      "class": "",
+      "styles": "",
+      "formFields": {
+        "title": {
+          "text": "JOIN THE FIGHT AGAINST FIRES",
+          "class": "",
+          "styles": ""
+        },
+        "subtitle": {
+          "text": "Haze is caused by rampant peat and forest fires. Take action to put a stop to this now.",
+          "class": "",
+          "styles": ""
+        },
+        "button": {
+          "href": "/",
+          "text": "TAKE ACTION",
+          "class": "",
+          "styles": ""
+        },
+        "background": {
+          "image": "images/IMG_1719.JPG"
+        }
+      }
+    },
+    {
+      "type": "ScrollSection",
+      "class": "",
+      "styles": "",
+      "formFields": {
+        "title": {
+          "text": "WE CHAMPION ENVIRONMENTAL CHANGE IN SINGAPORE",
+          "class": "",
+          "styles": ""
+        },
+        "iconButton": {
+          "href": "/",
+          "icon": "down-arrow",
+          "class": "",
+          "styles": ""
+        },
+        "image": {
+          "title": "Bring Wildlife Back",
+          "link": "#campaigns",
+          "src": "./images/homepage.png",
+          "alt": "Bring Wildlife Back",
+          "class": "",
+          "styles": ""
+        }
+      }
+    }
+  ]
+}

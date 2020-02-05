@@ -71,7 +71,7 @@ module.exports = async ({ actions, graphql }) => {
     const postTemplate = path.resolve(`./src/templates/post.js`)
 
     blogPages.map(blogPage => {
-      console.log(`createBlogPage ${blogPage.context.pageNumber}`)
+      console.log(`create Blog Page ${blogPage.context.pageNumber}`)
       createPage(blogPage)
     })
 

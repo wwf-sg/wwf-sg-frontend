@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Layout from "./layout"
-import Button from "../../components/ui/Button"
+import Button from "../../components/Ui/Button"
 
 const DocButton = () => (
   <Layout>

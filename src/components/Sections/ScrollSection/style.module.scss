@@ -1,13 +1,11 @@
-@import "../../styles/variables";
+@import "../../../styles/variables";
 
 .section {
-  background-color: #f4f2f2;
-  @include media-breakpoint-up(md) {
-    padding: 6rem 0 !important;
-  }
+  background-color: #fff;
 }
 
 .title {
+  text-align: right;
   font-size: 32px;
   line-height: 0.88;
   margin-bottom: 24px;
@@ -21,6 +19,11 @@
   }
 }
 
-.img {
-  padding: 0.5rem 1rem;
+.icon {
+  max-width: 36px;
+  margin-right: 1rem;
+  @include media-breakpoint-up(md) {
+    margin-right: 2rem;
+    max-width: 48px;
+  }
 }

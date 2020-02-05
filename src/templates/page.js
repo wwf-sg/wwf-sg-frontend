@@ -1,32 +1,39 @@
 import React from "react"
 import { graphql } from "gatsby"
 import SiteLayout from "../components/SiteLayout"
-import CategoriesWidget from "../components/CategoriesWidget"
-import RecentCommentsWidget from "../components/RecentCommentsWidget"
-import RecentPostsWidget from "../components/RecentPostsWidget"
 import Seo from "../components/Seo"
+
+import HeroSection from "../components/Sections/HeroSection"
+import ScrollSection from "../components/Sections/ScrollSection"
+// import SetOfFourSection from "../components/Sections/SetOfFourSection"
+// import RecentPostsWidget from "../components/Widgets/RecentPostsWidget"
 
 const Page = props => {
   const {
     location,
     data: {
-      wpgraphql: { page },
+      pagesJson: { title, content },
     },
   } = props
-  const { title, content } = page
+
+  const components = {
+    HeroSection: HeroSection,
+    ScrollSection: ScrollSection,
+    // SetOfFourSection: SetOfFourSection,
+    // RecentPostsWidget: RecentPostsWidget,
+  }
+
   return (
     <SiteLayout location={location}>
-      <Seo title={`${page.title}`} />
-      <div className="container">
-        <div>
-          <h1>{title}</h1>
-          <div>
-            <div>
-              <div dangerouslySetInnerHTML={{ __html: content }} />
-            </div>
-          </div>
-        </div>
-      </div>
+      <Seo title={`${title}`} />
+      {content.map(component => {
+        console.log(component)
+
+        return React.createElement(components[component.type], {
+          ...component,
+          key: component.type,
+        })
+      })}
     </SiteLayout>
   )
 }
@@ -34,12 +41,55 @@ const Page = props => {
 export default Page
 
 export const pageQuery = graphql`
-  query GET_PAGE($id: ID!) {
-    wpgraphql {
-      page(id: $id) {
-        title
-        content
-        uri
+  query GET_PAGE($id: String!) {
+    pagesJson(id: { eq: $id }) {
+      title
+      content {
+        type
+        formFields {
+          title {
+            class
+            styles
+            text
+          }
+          subtitle {
+            class
+            styles
+            text
+          }
+          background {
+            image
+          }
+          button {
+            class
+            href
+            styles
+            text
+            icon
+          }
+          iconButton {
+            class
+            href
+            icon
+            styles
+          }
+          images {
+            alt
+            link
+            src
+            styles
+            title
+            class
+          }
+          image {
+            alt
+            class
+            link
+            src
+            styles
+            title
+          }
+        }
       }
     }
   }

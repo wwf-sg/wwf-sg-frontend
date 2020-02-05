@@ -1,118 +1,122 @@
-[
-  {
-    "type": "hero-section",
-    "class": "",
-    "styles": "",
-    "formFields": {
-      "title": {
-        "text": "JOIN THE FIGHT AGAINST FIRES",
-        "class": "",
-        "styles": ""
-      },
-      "subtitle": {
-        "text": "Haze is caused by rampant peat and forest fires. Take action to put a stop to this now.",
-        "class": "",
-        "styles": ""
-      },
-      "button": {
-        "href": "/",
-        "text": "TAKE ACTION",
-        "class": "",
-        "styles": ""
-      },
-      "background": {
-        "image": "images/IMG_1719.JPG"
+{
+  "title": "Home",
+  "slug": "",
+  "content": [
+    {
+      "type": "HeroSection",
+      "class": "",
+      "styles": "",
+      "formFields": {
+        "title": {
+          "text": "JOIN THE FIGHT AGAINST FIRES",
+          "class": "",
+          "styles": ""
+        },
+        "subtitle": {
+          "text": "Haze is caused by rampant peat and forest fires. Take action to put a stop to this now.",
+          "class": "",
+          "styles": ""
+        },
+        "button": {
+          "href": "/",
+          "text": "TAKE ACTION",
+          "class": "",
+          "styles": ""
+        },
+        "background": {
+          "image": "images/IMG_1719.JPG"
+        }
       }
-    }
-  },
-  {
-    "type": "scroll-section",
-    "class": "",
-    "styles": "",
-    "formFields": {
-      "title": {
-        "text": "WE CHAMPION ENVIRONMENTAL CHANGE IN SINGAPORE",
-        "class": "",
-        "styles": ""
-      },
-      "iconButton": {
-        "href": "/",
-        "icon": "down-arrow",
-        "class": "",
-        "styles": ""
-      },
-      "image": {
-        "title": "Bring Wildlife Back",
-        "link": "#campaigns",
-        "src": "./images/homepage.png",
-        "alt": "Bring Wildlife Back",
-        "class": "",
-        "styles": ""
-      }
-    }
-  },
-  {
-    "type": "set-of-four-section",
-    "class": "",
-    "styles": "",
-    "formFields": {
-      "title": {
-        "text": "We address priority conservation and sustainability challenges in Singapore and Southeast Asia",
-        "class": "",
-        "styles": ""
-      },
-      "images": [
-        {
+    },
+    {
+      "type": "ScrollSection",
+      "class": "",
+      "styles": "",
+      "formFields": {
+        "title": {
+          "text": "WE CHAMPION ENVIRONMENTAL CHANGE IN SINGAPORE",
+          "class": "",
+          "styles": ""
+        },
+        "iconButton": {
+          "href": "/",
+          "icon": "down-arrow",
+          "class": "",
+          "styles": ""
+        },
+        "image": {
           "title": "Bring Wildlife Back",
-          "link": "campaign/bring-wildlife-back",
-          "src": "./images/bring-wildlife-back.png",
+          "link": "#campaigns",
+          "src": "./images/homepage.png",
           "alt": "Bring Wildlife Back",
           "class": "",
           "styles": ""
-        },
-        {
-          "title": "Protect Food Sources",
-          "link": "campaign/protect-food-sources",
-          "src": "./images/protect-food-sources.png",
-          "alt": "Protect Food Sources",
+        }
+      }
+    },
+    {
+      "type": "SetOfFourSection",
+      "class": "",
+      "styles": "",
+      "formFields": {
+        "title": {
+          "text": "We address priority conservation and sustainability challenges in Singapore and Southeast Asia",
           "class": "",
           "styles": ""
         },
-        {
-          "title": "Make Singapore Haze-Free",
-          "link": "campaign/make-sg-haze-free",
-          "src": "./images/make-sg-haze-free.png",
-          "alt": "Make Singapore Haze-Free",
+        "images": [
+          {
+            "title": "Bring Wildlife Back",
+            "link": "campaign/bring-wildlife-back",
+            "src": "./images/bring-wildlife-back.png",
+            "alt": "Bring Wildlife Back",
+            "class": "",
+            "styles": ""
+          },
+          {
+            "title": "Protect Food Sources",
+            "link": "campaign/protect-food-sources",
+            "src": "./images/protect-food-sources.png",
+            "alt": "Protect Food Sources",
+            "class": "",
+            "styles": ""
+          },
+          {
+            "title": "Make Singapore Haze-Free",
+            "link": "campaign/make-sg-haze-free",
+            "src": "./images/make-sg-haze-free.png",
+            "alt": "Make Singapore Haze-Free",
+            "class": "",
+            "styles": ""
+          },
+          {
+            "title": "Keep Plastic Out of Nature",
+            "link": "campaign/keep-plastic-out-of-nature",
+            "src": "./images/keep-plastic-out-of-nature.png",
+            "alt": "Keep Plastic Out of Nature",
+            "class": "",
+            "styles": ""
+          }
+        ]
+      }
+    },
+    {
+      "type": "RecentPostsWidget",
+      "class": "",
+      "styles": "",
+      "formFields": {
+        "title": {
+          "text": "What's Hapenning",
           "class": "",
           "styles": ""
         },
-        {
-          "title": "Keep Plastic Out of Nature",
-          "link": "campaign/keep-plastic-out-of-nature",
-          "src": "./images/keep-plastic-out-of-nature.png",
-          "alt": "Keep Plastic Out of Nature",
+        "button": {
+          "href": "/blog",
+          "icon": "READ MORE",
           "class": "",
           "styles": ""
         }
-      ]
-    }
-  },
-  {
-    "type": "recent-posts-widget",
-    "class": "",
-    "styles": "",
-    "formFields": {
-      "title": {
-        "text": "What's Hapenning",
-        "class": "",
-        "styles": ""
-      },
-      "button": {
-        "href": "/blog",
-        "icon": "READ MORE",
-        "class": "",
-        "styles": ""
       }
     }
-  }
-]
+  ]
+}

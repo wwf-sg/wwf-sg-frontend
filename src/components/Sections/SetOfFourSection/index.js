@@ -1,36 +1,11 @@
 import React from "react"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-import { createLocalLink } from "../../utils"
+import { createLocalLink } from "../../../utils"
 
 import SetOfFourSectionStyles from "./style.module.scss"
 
 const SetOfFourSection = props => {
-  const data = useStaticQuery(graphql`
-    query GET_SET_OF_FOUR_SECTION {
-      homePageJson(id: { eq: "40918f9f-1efa-5dd0-aff4-7578b6693307" }) {
-        id
-        styles
-        type
-        class
-        formFields {
-          images {
-            alt
-            class
-            src
-            styles
-            link
-          }
-          title {
-            class
-            text
-            styles
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <section className={`wwf-sg-section ${SetOfFourSectionStyles.section}`}>
       <div className="wwf-sg-container container">

@@ -1,58 +1,57 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
 import SiteLayout from "../components/SiteLayout"
 import Seo from "../components/Seo"
-// import Button from "../components/ui/Button"
-import HeroSection from "../components/HeroSection"
-import ScrollSection from "../components/ScrollSection"
-import SetOfFourSection from "../components/SetOfFourSection"
-import RecentPostsWidget from "../components/RecentPostsWidget"
+// import HeroSection from "../components/Sections/HeroSection"
+// import ScrollSection from "../components/Sections/ScrollSection"
+// import SetOfFourSection from "../components/Sections/SetOfFourSection"
+// import RecentPostsWidget from "../components/Widgets/RecentPostsWidget"
 
 const IndexPage = ({ location }) => {
-  const data = useStaticQuery(graphql`
-    query HomePageQuery {
-      allHomePageJson {
-        nodes {
-          styles
-          type
-          id
-          class
-        }
-      }
-    }
-  `)
-
-  console.log(data.allHomePageJson.nodes)
+  // const data = useStaticQuery(graphql`
+  //   query PagesQuery {
+  //     allPagesJson {
+  //       nodes {
+  //         styles
+  //         type
+  //         id
+  //         class
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <SiteLayout location={location}>
-      <Seo title="Home" />
+      {/* <Seo title="Home" /> */}
 
-      {data.allHomePageJson.nodes.map(node => {
-        console.log()
+      {/* {data.allHomePageJson.nodes.map(node => {
         switch (node.type) {
           case "hero-section":
-            return <HeroSection config={node}></HeroSection>
+            return <HeroSection key={node.id} config={node}></HeroSection>
             break
           case "scroll-section":
-            return <ScrollSection config={node}></ScrollSection>
+            return <ScrollSection key={node.id} config={node}></ScrollSection>
             break
           case "set-of-four-section":
-            return <SetOfFourSection config={node}></SetOfFourSection>
+            return (
+              <SetOfFourSection key={node.id} config={node}></SetOfFourSection>
+            )
             break
           case "recent-posts-widget":
             return (
               <RecentPostsWidget
                 style={{ backgroundColor: "#f4f2f2" }}
+                key={node.id}
                 config={node}
               ></RecentPostsWidget>
             )
             break
         }
-      })}
+      })} */}
     </SiteLayout>
   )
 }
 
-export default IndexPage
+// export default IndexPage

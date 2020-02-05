@@ -3,8 +3,8 @@ import { graphql, useStaticQuery, Link } from "gatsby"
 import PropTypes from "prop-types"
 import moment from "moment/moment"
 
-import config from "../../../config"
-import { createLocalLink } from "../../utils"
+import config from "../../../../config"
+import { createLocalLink } from "../../../utils"
 
 import RPWstyle from "./style.module.scss"
 
