@@ -1,6 +1,6 @@
 import React from "react"
 
-import Button from "../../Ui/Button"
+import Button from "../../Uii/Button"
 
 import HeroSectionStyles from "./style.module.scss"
 
