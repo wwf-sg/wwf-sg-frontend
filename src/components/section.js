@@ -14,10 +14,7 @@ import React from "react"
 const Section = () => {
   return (
     <section className="wwf-sg-section">
-      <div
-        className="wwf-sg-section-bg"
-        style={{ backgroundImage: `url()` }}
-      ></div>
+      <div className="wwf-sg-section-bg"></div>
 
       <div className="wwf-sg-section-bg-overlay"></div>
 

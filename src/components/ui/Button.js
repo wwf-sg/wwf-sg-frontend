@@ -19,7 +19,7 @@ const propTypes = {
   /**
    * Specifies a large or small button.
    *
-   * @type ('sm'|'lg')
+   * @type ('sm'|'lg'|'xl')
    */
   size: PropTypes.string,
 
