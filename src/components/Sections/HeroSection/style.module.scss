@@ -8,6 +8,9 @@
     padding: 6rem 0 !important;
     height: 850px;
   }
+  @include media-breakpoint-up(md) {
+    min-height: 90vh;
+  }
 }
 
 .title {

@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import { createLocalLink } from "../../utils"
 
 const MENU_QUERY = graphql`
-  fragment MenuFields on WPGraphQL_MenuItem {
+  fragment FooterMenuFields on WPGraphQL_MenuItem {
     id
     label
     url
@@ -16,10 +16,10 @@ const MENU_QUERY = graphql`
     wpgraphql {
       menuItems(where: { location: FOOTER }) {
         nodes {
-          ...MenuFields
+          ...FooterMenuFields
           childItems {
             nodes {
-              ...MenuFields
+              ...FooterMenuFields
             }
           }
         }

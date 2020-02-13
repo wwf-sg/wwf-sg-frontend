@@ -2,13 +2,25 @@ import React, { Fragment } from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { createLocalLink } from "../../utils"
 
+// import SHstyle from "./style.module.scss"
+
 const MENU_QUERY = graphql`
-  fragment MenuFields on WPGraphQL_MenuItem {
+  fragment HeaderMenuFields on WPGraphQL_MenuItem {
     id
     label
     url
     connectedObject {
       __typename
+      ... on WPGraphQL_Campaign {
+        campaignsTaxonomyFields {
+          featureColor
+          featureIcon {
+            altText
+            srcSet(size: THUMBNAIL)
+            sourceUrl(size: THUMBNAIL)
+          }
+        }
+      }
     }
   }
 
@@ -16,13 +28,13 @@ const MENU_QUERY = graphql`
     wpgraphql {
       menuItems(where: { location: PRIMARY }) {
         nodes {
-          ...MenuFields
+          ...HeaderMenuFields
           childItems {
             nodes {
-              ...MenuFields
+              ...HeaderMenuFields
               childItems {
                 nodes {
-                  ...MenuFields
+                  ...HeaderMenuFields
                 }
               }
             }
@@ -65,21 +77,79 @@ const renderSubMenu = menuItem => (
     >
       {menuItem.label}
     </Link>
+
     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-      {menuItem.childItems.nodes.map(item => (
-        <Link
-          key={item.id}
-          className="dropdown-item px-3"
-          to={createLocalLink(item.url)}
-          title={item.label}
-        >
-          {item.label}
-        </Link>
-      ))}
+      {menuItem.childItems.nodes.map(item => {
+        var { featureColor, featureIcon } =
+          item.connectedObject.campaignsTaxonomyFields || {}
+
+        return (
+          <Link
+            key={item.id}
+            className="dropdown-item px-3 d-flex align-items-center"
+            to={createLocalLink(item.url)}
+            title={item.label}
+            style={{
+              color: featureColor || "",
+            }}
+          >
+            {featureIcon ? (
+              <img
+                className="mr-2"
+                style={{ width: "32px", height: "32px" }}
+                srcSet={featureIcon.srcSet}
+                src={featureIcon.sourceUrl}
+                alt={featureIcon.altText}
+              />
+            ) : (
+              ""
+            )}
+            <span>{item.label}</span>
+          </Link>
+        )
+      })}
     </div>
   </li>
 )
-
+// {post.campaigns.nodes.map((campaign, i) => {
+//   if (i > 1) return null
+//   return (
+//     <Fragment key={campaign.slug}>
+//       <Link
+//         className={`entry-campaign ${RPWstyle.entryCampaign}`}
+//         style={{
+//           color:
+//             campaign.campaignsTaxonomyFields.featureColor,
+//           fontSize: "16px",
+//           fontWeight: 600,
+//           lineHeight: 1,
+//           letterSpacing: "-0.7px",
+//         }}
+//         to={"/campaign/" + campaign.slug}
+//         key={campaign.slug}
+//         rel="category"
+//       >
+//         <img
+//           className="mr-2"
+//           style={{ maxWidth: "40px" }}
+//           srcSet={
+//             campaign.campaignsTaxonomyFields.featureIcon
+//               .srcSet
+//           }
+//           src={
+//             campaign.campaignsTaxonomyFields.featureIcon
+//               .sourceUrl
+//           }
+//           alt={
+//             campaign.campaignsTaxonomyFields.featureIcon
+//               .altText
+//           }
+//         />
+//         {campaign.name}
+//       </Link>
+//     </Fragment>
+//   )
+// })}
 const HeaderMenu = ({ location }) => (
   <StaticQuery
     query={MENU_QUERY}
