@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="wave" viewBox="0 0 1000 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-Desktop" transform="translate(0.000000, -3281.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="FOOTER" transform="translate(-2.000000, 3281.000000)">
+                <g id="wave-(1)">
+                    <path d="M0,76.7221717 L42.75,91.9354076 C85.5,107.434338 171,137.432268 256.5,149.074322 C342,160.287834 427.5,153.145469 513,122.433303 C598.5,91.7211366 684,38.867641 769.5,15.7978044 C855,-6.8434903 940.5,0.298873972 983.25,4.37002161 L1026,8.15547467 L1026,191 L983.25,191 C940.5,191 855,191 769.5,191 C684,191 598.5,191 513,191 C427.5,191 342,191 256.5,191 C171,191 85.5,191 42.75,191 L0,191 L0,76.7221717 Z" id="Path"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

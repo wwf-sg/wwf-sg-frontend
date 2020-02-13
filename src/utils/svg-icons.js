@@ -1,4 +1,6 @@
-const social_icons_map = {
+import React from "react"
+
+export const social_icons_map = {
   amazon: [
     "amazon.com",
     "amazon.cn",
@@ -90,24 +92,65 @@ export const get_social_link_svg = uri => {
   // 		return null;
 }
 
-const get_svg = ($icon, $group = "ui", $color = "#1A1A1B") => {
-  if ("ui" === $group) {
-    $arr = ui_icons
-  } else if ("social" === $group) {
-    $arr = social_icons
-  } else {
-    $arr = []
-  }
-
-  //   if (array_key_exists($icon, $arr)) {
-  //     $repl =
-  //       '<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" '
-  //     $svg = preg_replace("/^<svg /", $repl, trim($arr[$icon])) // Add extra attributes to SVG code.
-  //     $svg = str_replace("#1A1A1B", $color, $svg) // Replace the color.
-  //     $svg = str_replace("#", "%23", $svg) // Urlencode hashes.
-  //     $svg = preg_replace("/([\n\t]+)/", " ", $svg) // Remove newlines & tabs.
-  //     $svg = preg_replace("/>s*</", "><", $svg) // Remove white space between SVG tags.
-  //     return $svg
-  //   }
-  //   return null
+export const get_svg = ($icon, $group = "ui", $color = "#1A1A1B") => {
+  // if ("ui" === $group) {
+  //   $arr = ui_icons
+  // } else if ("social" === $group) {
+  //   $arr = social_icons
+  // } else {
+  //   $arr = []
+  // }
+  // if (array_key_exists($icon, $arr)) {
+  //   $repl =
+  //     '<svg class="svg-icon" aria-hidden="true" role="img" focusable="false" '
+  //   $svg = preg_replace("/^<svg /", $repl, trim($arr[$icon])) // Add extra attributes to SVG code.
+  //   $svg = str_replace("#1A1A1B", $color, $svg) // Replace the color.
+  //   $svg = str_replace("#", "%23", $svg) // Urlencode hashes.
+  //   $svg = preg_replace("/([\n\t]+)/", " ", $svg) // Remove newlines & tabs.
+  //   $svg = preg_replace("/>s*</", "><", $svg) // Remove white space between SVG tags.
+  //   return $svg
+  // }
+  // return null
 }
+
+export const Wave = ({
+  style = {},
+  fill = "#fff",
+  width = "100%",
+  height = "100%",
+  className = "wave",
+  viewBox = "0 0 1001 116.064",
+  // viewBox = "0 0 1019 199",
+}) => (
+  <>
+    <svg
+      width={width}
+      style={style}
+      height={height}
+      viewBox={viewBox}
+      className={`wawe ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      {/* top: transparent; bottom: fill */}ff"
+      <path
+        d="M367-203.445v50.556H1367v-38.925s-134.643,36.62-306.3,0-239.6-74.737-432.032-76.117S367-203.445,367-203.445Z"
+        transform="translate(-366.5 268.453)"
+        fill={fill}
+      />
+      {/* <g fill="#fff" transform="matrix(1 0 0 -1 0 193)">
+        <path
+          d="m0 76.7221717 42.75 15.2132359c42.75 15.4989304 128.25 45.4968604 213.75 57.1389144 85.5 11.213512 171 4.071147 256.5-26.641019 85.5-30.7121664 171-83.565662 256.5-106.6354986 85.5-22.6412947 171-15.49893043 213.75-11.42778279l42.75 3.78545306v182.84452533h-42.75c-42.75 0-128.25 0-213.75 0s-171 0-256.5 0-171 0-256.5 0-171 0-213.75 0h-42.75z"
+          transform="matrix(1 0 0 -1 0 191)"
+        />
+      </g> */}
+      {/* top: fill; bottom: transparent */}
+      {/* <g fill={fill} transform="translate(-11 2)">
+        <path
+          d="m0 76.7221717 42.75 15.2132359c42.75 15.4989304 128.25 45.4968604 213.75 57.1389144 85.5 11.213512 171 4.071147 256.5-26.641019 85.5-30.7121664 171-83.565662 256.5-106.6354986 85.5-22.6412947 171-15.49893043 213.75-11.42778279l42.75 3.78545306v182.84452533h-42.75c-42.75 0-128.25 0-213.75 0s-171 0-256.5 0-171 0-256.5 0-171 0-213.75 0h-42.75z"
+          transform="matrix(1 0 0 -1 0 191)"
+        />
+      </g> */}
+    </svg>
+  </>
+)

@@ -2,12 +2,19 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { createLocalLink } from "../../../utils"
+import { Wave } from "../../../utils/svg-icons"
 
 import SetOfFourSectionStyles from "./style.module.scss"
 
 const SetOfFourSection = props => {
   return (
-    <section className={`wwf-sg-section ${SetOfFourSectionStyles.section}`}>
+    <section
+      className={`wwf-sg-section ${props.class} ${SetOfFourSectionStyles.section}`}
+    >
+      <div className="wwf-sg-section-divider wwf-sg-section-divider-top">
+        <Wave className="" fill="#fff" />
+      </div>
+
       <div className="wwf-sg-container container">
         <div className="wwf-sg-row row">
           <div className="wwf-sg-column col">

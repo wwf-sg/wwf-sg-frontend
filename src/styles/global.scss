@@ -113,6 +113,9 @@ h2 {
 .wwf-sg-section {
   padding: 3rem 0;
   position: relative;
+  @include media-breakpoint-up(md) {
+    padding: 6rem 0;
+  }
 }
 
 .wwf-sg-section-bg,
@@ -133,6 +136,23 @@ h2 {
   background-color: rgba(0, 0, 0, 0.68);
 }
 
+.wwf-sg-section-divider {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  direction: ltr;
+}
+
+.wwf-sg-section-divider-top {
+  transform: scaleY(-1);
+  top: -1px;
+}
+
+.wwf-sg-section-divider-bottom {
+  bottom: -1px;
+}
 .site-header {
   .site-logo {
     height: 56px;

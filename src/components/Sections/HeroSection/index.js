@@ -1,6 +1,7 @@
 import React from "react"
 
 import Button from "../../Ui/Button"
+import { Wave } from "../../../utils/svg-icons"
 
 import HeroSectionStyles from "./style.module.scss"
 
@@ -16,7 +17,15 @@ const HeroSection = props => {
           color: "white",
         }}
       ></div>
+
       <div className="wwf-sg-section-bg-overlay"></div>
+
+      <div className="wwf-sg-section-divider wwf-sg-section-divider-top"></div>
+
+      <div className="wwf-sg-section-divider wwf-sg-section-divider-bottom">
+        <Wave />
+      </div>
+
       <div className="wwf-sg-container container">
         <div className="wwf-sg-row row align-items-start">
           <div className="wwf-sg-column col-10 offset-1  col-md-5 col-lg-4 text-center text-md-left">

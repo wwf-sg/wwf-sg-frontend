@@ -2,9 +2,6 @@
 
 .section {
   background-color: #f4f2f2;
-  @include media-breakpoint-up(md) {
-    padding: 6rem 0 !important;
-  }
 }
 
 .title {
