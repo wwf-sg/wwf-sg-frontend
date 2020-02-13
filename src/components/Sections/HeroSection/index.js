@@ -6,8 +6,6 @@ import { Wave } from "../../../utils/svg-icons"
 import HeroSectionStyles from "./style.module.scss"
 
 const HeroSection = props => {
-  console.log(props.formFields.backgroundOverlay.backgroundColor)
-
   return (
     <section
       className={`wwf-sg-section d-flex align-items-center ${HeroSectionStyles.section}`}
