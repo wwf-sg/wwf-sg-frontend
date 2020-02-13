@@ -57,6 +57,8 @@ export const pageQuery = graphql`
           }
           background {
             image
+            backgroundColor
+            backgroundImage
           }
           button {
             class
@@ -86,6 +88,18 @@ export const pageQuery = graphql`
             src
             styles
             title
+          }
+          backgroundOverlay {
+            backgroundColor
+          }
+          bottomDivider {
+            backgroundColor
+            flip
+            object
+          }
+          topDivider {
+            flip
+            object
           }
         }
       }

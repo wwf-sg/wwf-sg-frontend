@@ -8,9 +8,7 @@ import SetOfFourSectionStyles from "./style.module.scss"
 
 const SetOfFourSection = props => {
   return (
-    <section
-      className={`wwf-sg-section ${props.class} ${SetOfFourSectionStyles.section}`}
-    >
+    <section className={`wwf-sg-section ${SetOfFourSectionStyles.section}`}>
       <div className="wwf-sg-section-divider wwf-sg-section-divider-top">
         <Wave className="" fill="#fff" />
       </div>

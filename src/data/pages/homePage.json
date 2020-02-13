@@ -68,6 +68,10 @@
       "class": "pt-5",
       "styles": "",
       "formFields": {
+        "topDivider": {
+          "object": "Wave",
+          "flip": true
+        },
         "title": {
           "text": "We address priority conservation and sustainability challenges in Singapore and Southeast Asia",
           "class": "",
@@ -105,12 +109,6 @@
             "alt": "Keep Plastic Out of Nature",
             "class": "",
             "styles": ""
-          },
-          {
-            "topDivider": {
-              "object": "Wave",
-              "flip": true
-            }
           }
         ]
       }

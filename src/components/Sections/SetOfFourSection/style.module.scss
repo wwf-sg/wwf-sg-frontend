@@ -2,6 +2,13 @@
 
 .section {
   background-color: #f4f2f2;
+  padding-top: 6rem;
+  @include media-breakpoint-up(md) {
+    padding-top: 12rem;
+  }
+  @include media-breakpoint-up(lg) {
+    padding-top: 24rem;
+  }
 }
 
 .title {

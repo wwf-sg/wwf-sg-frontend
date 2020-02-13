@@ -63,13 +63,16 @@ const RecentPostsWidget = props => {
     }
   `)
 
-  const { title = "Recent Posts" } = props
-
   return (
-    <section className="wwf-sg-section py-4" style={props.style}>
+    <section
+      className={`wwf-sg-section ${RPWstyle.section}`}
+      style={props.style}
+    >
       <div className="container">
         <div className="mb-5">
-          <h2 className={`text-center ${RPWstyle.widgetTitle}`}>{title}</h2>
+          <h2 className={`text-center ${RPWstyle.widgetTitle}`}>
+            {props.formFields.title.text}
+          </h2>
         </div>
         <div className={`entry-grid mb-4 ${RPWstyle.entryGrid}`}>
           {data.wpgraphql.posts.nodes.map(post => {

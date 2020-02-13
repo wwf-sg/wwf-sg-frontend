@@ -1,5 +1,9 @@
 @import "../../../styles/variables";
 
+.section {
+  background-color: #f4f2f2;
+}
+
 .widget-title {
   font-family: WWF;
   font-size: 32px;
@@ -11,6 +15,9 @@
     line-height: 0.83;
     margin: auto;
     margin-bottom: 48px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 72px;
   }
 }
 
