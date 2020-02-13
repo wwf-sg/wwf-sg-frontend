@@ -24,8 +24,13 @@
           "styles": ""
         },
         "background": {
-          "image": "images/IMG_1719.JPG"
-        }
+          "backgroundImage": "",
+          "backgroundColor": ""
+        },
+        "backgroundOverlay": {
+          "backgroundColor": ""
+        },
+        "bottomDivider": {}
       }
     }
   ]

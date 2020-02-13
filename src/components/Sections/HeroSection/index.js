@@ -13,15 +13,17 @@ const HeroSection = props => {
       <div
         className="wwf-sg-section-bg"
         style={{
-          backgroundImage: `url('/${props.formFields.background.backgroundImage}')`,
-          color: `${props.formFields.background.backgroundColor}`,
+          backgroundImage: `url('/${props.formFields.background
+            .backgroundImage || ""}')`,
+          color: `${props.formFields.background.backgroundColor || ""}`,
         }}
       ></div>
 
       <div
         className="wwf-sg-section-bg-overlay"
         style={{
-          backgroundColor: `${props.formFields.backgroundOverlay.backgroundColor}`,
+          backgroundColor: `${props.formFields.backgroundOverlay
+            .backgroundColor || ""}`,
         }}
       ></div>
 
