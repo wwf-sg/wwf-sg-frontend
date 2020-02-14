@@ -6,3 +6,7 @@
 
 // You can delete this file if you're not using it
 import "./src/styles/global.scss"
+import "jquery/dist/jquery.slim.min.js"
+// import "@popperjs/core/dist/esm/popper"
+import "bootstrap/dist/js/bootstrap.min.js"
+import "./src/scripts/global.js"
