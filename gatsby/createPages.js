@@ -24,13 +24,21 @@ module.exports = async ({ actions, graphql }) => {
   const { createPage } = actions
   const allPages = []
 
-  const fetchPages = async variables =>
-    await graphql(GET_PAGES, variables).then(({ data }) => {
-      const {
-        allPagesJson: {
-          pageInfo: { hasNextPage, pageCount, perPage },
-          nodes,
-        },
+	const fetchPages = async variables =>
+	{
+
+		const {
+			allPagesJson: {
+				pageInfo: { hasNextPage, pageCount, perPage },
+				nodes,
+			} = await graphql(GET_PAGES, variables)
+			
+			
+
+	}
+
+		.then(({ data }) => {
+   
       } = data
 
       nodes.map(page => {
