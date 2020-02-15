@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image"
-import { createLocalLink } from "../../../utils"
+// import { createLocalLink } from "../../../utils"
 import { Wave } from "../../../utils/svg-icons"
 
 import SetOfFourSectionStyles from "./style.module.scss"
@@ -81,25 +81,25 @@ const SetOfFourSection = () => {
 					<div className="wwf-sg-column col">
 						<div className="row no-gutters">
 							<div className="col-6 col-md-3 p-3">
-								<Link to={createLocalLink(page.acfSetOfFourSection.setOfFourSlug1)}>
+								<Link to={page.acfSetOfFourSection.setOfFourSlug1}>
 									<Img
 										fluid={page.acfSetOfFourSection.setOfFourImage1.imageFile.childImageSharp.fluid} />
 								</Link>
 							</div>
 							<div className="col-6 col-md-3 p-3">
-								<Link to={createLocalLink(page.acfSetOfFourSection.setOfFourSlug2)}>
+								<Link to={page.acfSetOfFourSection.setOfFourSlug2}>
 									<Img
 										fluid={page.acfSetOfFourSection.setOfFourImage2.imageFile.childImageSharp.fluid} />
 								</Link>
 							</div>
 							<div className="col-6 col-md-3 p-3">
-								<Link to={createLocalLink(page.acfSetOfFourSection.setOfFourSlug3)}>
+								<Link to={page.acfSetOfFourSection.setOfFourSlug3}>
 									<Img
 										fluid={page.acfSetOfFourSection.setOfFourImage3.imageFile.childImageSharp.fluid} />
 								</Link>
 							</div>
 							<div className="col-6 col-md-3 p-3">
-								<Link to={createLocalLink(page.acfSetOfFourSection.setOfFourSlug4)}>
+								<Link to={page.acfSetOfFourSection.setOfFourSlug4}>
 									<Img
 										fluid={page.acfSetOfFourSection.setOfFourImage4.imageFile.childImageSharp.fluid} />
 								</Link>

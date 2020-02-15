@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React from "react"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
 import PropTypes from "prop-types"
@@ -78,8 +78,6 @@ const propTypes = {
 
 const RecentPostsWidget = props => {
 	const { wpgraphql: { posts: { nodes: blogPosts } } } = useStaticQuery(query)
-	// const [{ node: page }] = nodes
-	console.log(blogPosts)
 
 	return (
 		<section
@@ -89,7 +87,7 @@ const RecentPostsWidget = props => {
 			<div className="container">
 				<div className="mb-5">
 					<h2 className={`text-center ${RPWstyle.widgetTitle}`}>
-						{/* {props.formFields.title.text} */}
+					What's Hapenning
 					</h2>
 				</div>
 				<div className={`entry-grid mb-4 ${RPWstyle.entryGrid}`}>
