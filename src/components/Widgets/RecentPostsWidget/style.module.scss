@@ -73,13 +73,14 @@
   }
 }
 
-.entry-header,
-.entry-footer,
-.entry-content {
-}
+// .entry-header,
+// .entry-footer,
+// .entry-content {
+// }
 
 .entry-image {
-  min-height: 150px;
+	min-height: 150px;
+	
   @include media-breakpoint-up(md) {
   }
   @include media-breakpoint-up(lg) {
@@ -87,6 +88,7 @@
 }
 
 .entry-title {
+	padding-top:15px;
   font-size: 21px;
   font-weight: bold;
   line-height: 1.24;
