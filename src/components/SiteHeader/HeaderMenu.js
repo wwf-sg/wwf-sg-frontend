@@ -119,7 +119,7 @@ const renderSubMenu = menuItem => (
   </li>
 )
 
-const HeaderMenu = ({ location }) => {
+const HeaderMenu = () => {
   return (
     <StaticQuery
       query={MENU_QUERY}
