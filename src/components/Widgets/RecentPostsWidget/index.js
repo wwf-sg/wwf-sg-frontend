@@ -52,13 +52,13 @@ fragment AcfImage on WPGraphQL_MediaItem {
 					nodes {
 						name
 						slug
-						campaignsTaxonomyFields {
-							featureColor
-							featureIcon {
-								...AcfImage
-								altText
-							}
-						}
+						# campaignsTaxonomyFields {
+						# 	featureColor
+						# 	featureIcon {
+						# 		...AcfImage
+						# 		altText
+						# 	}
+						# }
 					}
 				}
 				featuredImage {
