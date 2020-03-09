@@ -52,13 +52,7 @@ fragment AcfImage on WPGraphQL_MediaItem {
 					nodes {
 						name
 						slug
-						campaignsTaxonomyFields {
-							featureColor
-							featureIcon {
-								...AcfImage
-								altText
-							}
-						}
+		 			# }
 					}
 				}
 				featuredImage {
@@ -87,19 +81,21 @@ const RecentPostsWidget = props => {
 			<div className="container">
 				<div className="mb-5">
 					<h2 className={`text-center ${RPWstyle.widgetTitle}`}>
-					What's Hapenning
+						What's Hapenning
 					</h2>
 				</div>
 				<div className={`entry-grid mb-4 ${RPWstyle.entryGrid}`}>
 					{blogPosts.map(post => {
 						return (
 							<article className={`entry ${RPWstyle.entry}`} key={post.id}>
-								<Link to={"/blog/" + createLocalLink(post.link)}>
-									<Img
-										className={`w-100 ${RPWstyle.entryImage}`}
-										alt={post.featuredImage.altText}
-										fluid={post.featuredImage.imageFile.childImageSharp.fluid} />
-								</Link>
+								{post.featuredImage &&
+									<Link to={"/blog/" + createLocalLink(post.link)}>
+										<Img
+											className={`w-100 ${RPWstyle.entryImage}`}
+											alt={post.featuredImage.altText}
+											fluid={post.featuredImage.imageFile.childImageSharp.fluid} />
+									</Link>
+								}
 								<header className={`p-3 entry-header`}>
 									<div className="campaigns-link mb-3">
 										{post.campaigns.nodes.map((campaign, i) => {

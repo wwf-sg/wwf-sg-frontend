@@ -1,0 +1,124 @@
+@import "../../styles/variables";
+
+.navbar-toggler {
+  border: 0;
+  &:focus {
+    outline: 0;
+  }
+}
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+.nav-item {
+  @include media-breakpoint-down(md) {
+    border: 1px solid #ededed;
+  }
+}
+
+.navbar-nav {
+  @include media-breakpoint-down(md) {
+    background-color: #fff;
+    .nav-link {
+      color: #000 !important;
+    }
+  }
+}
+
+.site-header {
+  .navbar-brand {
+    position: relative;
+    margin-left: 0;
+    vertical-align: super;
+    margin-top: -28px;
+    @include media-breakpoint-up(md) {
+      margin-top: -24px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: -12px;
+    }
+  }
+  .site-logo {
+    height: 39px;
+    max-width: 80px;
+    z-index: 1;
+    @include media-breakpoint-up(md) {
+      height: 44px;
+    }
+    @include media-breakpoint-up(lg) {
+      height: auto;
+    }
+  }
+  .dropdown-menu {
+    margin-top: 0;
+    @include media-breakpoint-down(md) {
+      border: 0;
+      background-color: #efefef;
+      padding: 15px 0;
+    }
+  }
+}
+.dropdown {
+  @include media-breakpoint-up(lg) {
+    &:hover {
+      .dropdown-menu {
+        display: block;
+        min-width: 232px;
+      }
+      .dropdown-menu {
+        border-radius: 0;
+      }
+
+      .dropdown-item {
+        white-space: normal;
+        padding: 5px 14px;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.7px;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-toggle {
+  &:after {
+    content: "+";
+    border: 0;
+    vertical-align: 0;
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+}
+
+.navbar-collapse {
+  @include media-breakpoint-down(md) {
+    position: absolute;
+    width: 100%;
+    top: 67px;
+    z-index: 1;
+  }
+}
+
+.search-input {
+  position: relative;
+  background-color: #f4f2f2;
+  &:after {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: 0;
+    content: "+";
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.search-submit {
+  background-color: #f4f2f2;
+}
