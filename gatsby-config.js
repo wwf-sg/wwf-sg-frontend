@@ -20,7 +20,7 @@ module.exports = {
 				url: `https://dev-wwfsg.pantheonsite.io/graphql`,
 			},
 		},
-		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-react-helmet-async`,
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {

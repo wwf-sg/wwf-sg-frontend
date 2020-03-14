@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 import SiteHeader from "./SiteHeader"
@@ -26,10 +25,6 @@ const SiteLayout = ({ children, location }) => {
 
   return (
     <div>
-      <Helmet>
-        {/* <base href="https://wwf-sg.github.io/wwf-sg-frontend/" /> */}
-      </Helmet>
-
       <SiteHeader
         location={location}
         siteTitle={data.site.siteMetadata.title}
